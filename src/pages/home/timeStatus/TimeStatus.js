@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import WavingHandIcon from "@mui/icons-material/WavingHand";
 import { Box, Typography } from "@mui/material";
 import SentimentSatisfiedAltIcon from "@mui/icons-material/SentimentSatisfiedAlt";
-import dynamic from "next/dynamic";
 
 function TimeStatus() {
     const [currentTime, setCurrentTime] = useState(new Date());
