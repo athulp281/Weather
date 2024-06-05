@@ -22,7 +22,7 @@ function Footer() {
                 sx={{
                     width: "100%",
                     minHeight: 200,
-                    bgcolor: "black",
+                    // bgcolor: "black",
                     display: "flex",
                     justifyContent: "center",
                     overflow: "hidden",
@@ -30,6 +30,7 @@ function Footer() {
                 }}
             >
                 <Box sx={{ width: "100%" }}>
+                    <Divider sx={{ bgcolor: "#797979" }} />
                     <Stack direction={smUp ? "row" : "column"} spacing={2}>
                         <Stack direction={mdUp ? "row" : "column"} spacing={2}>
                             <Box
@@ -63,7 +64,7 @@ function Footer() {
                                             sx={{
                                                 mt: 1,
                                                 flexGrow: 1,
-                                                color: "white",
+                                                // color: "white",
                                                 fontWeight: "bolder",
                                                 fontFamily: "Open Sans",
                                                 fontStyle: "normal",
