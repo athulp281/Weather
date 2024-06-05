@@ -1,6 +1,6 @@
 import { Box, Container, Grid, Paper, Typography } from "@mui/material";
 import React from "react";
-import { news } from "../demoData";
+import { news } from "../../data/demoData";
 import NewsCard from "@/components/NewsCard";
 
 function NewsSection() {

@@ -3,7 +3,7 @@ import React from "react";
 import MapView from "./MapView";
 import NewsSection from "./NewsSection";
 import TopStories from "@/components/TopStories";
-import { topStories } from "../demoData";
+import { topStories } from "../../data/demoData";
 import useResponsive from "@/Hooks/useResponsive";
 import Footer from "@/components/Footer";
 
