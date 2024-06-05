@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import WavingHandIcon from "@mui/icons-material/WavingHand";
 import { Box, Typography } from "@mui/material";
 import SentimentSatisfiedAltIcon from "@mui/icons-material/SentimentSatisfiedAlt";
-import getGreetingMessage from "./getGreetingMessage";
+import GetGreetingMessage from "./getGreetingMessage";
 
 function TimeStatus() {
     const [currentTime, setCurrentTime] = useState(new Date());
@@ -26,7 +26,7 @@ function TimeStatus() {
             Hey there..!
         </Typography>,
         <Typography key="2" variant="h6">
-            {getGreetingMessage()}
+            {GetGreetingMessage()}
         </Typography>,
         <Typography key="3" variant="h6">
             <SentimentSatisfiedAltIcon sx={{ color: "orange" }} />

@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function getGreetingMessage() {
+function GetGreetingMessage() {
     const [currentTime, setCurrentTime] = useState(new Date());
     const hours = currentTime.getHours();
     if (hours < 12) {
@@ -12,4 +12,4 @@ function getGreetingMessage() {
     }
 }
 
-export default getGreetingMessage;
+export default GetGreetingMessage;
