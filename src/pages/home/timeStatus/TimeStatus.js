@@ -3,20 +3,22 @@ import { motion } from "framer-motion";
 import WavingHandIcon from "@mui/icons-material/WavingHand";
 import { Box, Typography } from "@mui/material";
 import SentimentSatisfiedAltIcon from "@mui/icons-material/SentimentSatisfiedAlt";
+import getGreetingMessage from "./getGreetingMessage";
 
 function TimeStatus() {
     const [currentTime, setCurrentTime] = useState(new Date());
     const [currentMessageIndex, setCurrentMessageIndex] = useState(0);
-    const getGreetingMessage = () => {
-        const hours = currentTime.getHours();
-        if (hours < 12) {
-            return "Good Morning";
-        } else if (hours < 18) {
-            return "Good Afternoon";
-        } else {
-            return "Good Evening";
-        }
-    };
+
+    // const getGreetingMessage = () => {
+    //     const hours = currentTime.getHours();
+    //     if (hours < 12) {
+    //         return "Good Morning";
+    //     } else if (hours < 18) {
+    //         return "Good Afternoon";
+    //     } else {
+    //         return "Good Evening";
+    //     }
+    // };
 
     const messages = [
         <Typography key="1" variant="h6">
