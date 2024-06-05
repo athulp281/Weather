@@ -1,4 +1,7 @@
+import { useState } from "react";
+
 function getGreetingMessage() {
+    const [currentTime, setCurrentTime] = useState(new Date());
     const hours = currentTime.getHours();
     if (hours < 12) {
         return "Good Morning";

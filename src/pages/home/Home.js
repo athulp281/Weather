@@ -4,9 +4,9 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import WeatherCard from "../weatherHead/WeatherCard";
 import { Box, Container, Stack, Typography } from "@mui/material";
-import TimeStatus from "./timeStatus/TimeStatus";
+import TimeStatus from "../../components/timeStatus/TimeStatus";
 import MapView from "./MapView";
-// import { AnimatedComponent } from "./timeStatus";
+import { AnimatedComponent } from "../../components/timeStatus";
 import Content from "./Content";
 import useResponsive from "@/Hooks/useResponsive";
 import Footer from "@/components/Footer";
@@ -70,7 +70,7 @@ function HomePage() {
         return (
             <Box sx={{ width: mdUp ? "60%" : "100%" }}>
                 <Box>
-                    {/* <AnimatedComponent /> */}
+                    <AnimatedComponent />
                     <Typography variant="h4" style={styles}>
                         Stay updated with the latest weather <br /> forecasts
                         and alerts for your area.
