@@ -21,7 +21,9 @@ export default function MobileNavBar() {
 
     const DrawerList = (
         <Box
-            sx={{ width: 250 }}
+            sx={{
+                width: 250,
+            }}
             role="presentation"
             onClick={toggleDrawer(false)}
         >
@@ -34,6 +36,9 @@ export default function MobileNavBar() {
                             component={Link}
                             href={item.href}
                             sx={{
+                                display: "flex",
+                                justifyContent: "center",
+                                textAlign: "center",
                                 wordSpacing: 3,
                                 color:
                                     pathname === item.href
