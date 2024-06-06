@@ -28,8 +28,7 @@ export default function MobileNavBar() {
             <Divider />
             <List>
                 {MenuItems.map((item) => (
-                    <Box padding={0.5}>
-                        {" "}
+                    <Box padding={0.5} key={item.text}>
                         <MenuItem
                             key={item.text}
                             component={Link}
