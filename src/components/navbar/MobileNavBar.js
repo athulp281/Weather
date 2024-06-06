@@ -11,7 +11,7 @@ import { MenuItem } from "@mui/material";
 import { usePathname } from "next/navigation";
 import ListIcon from "@mui/icons-material/List";
 
-export default function MobileNavBar() {
+export default function MobileNavBar({ setNavItem }) {
     const pathname = usePathname();
     const [open, setOpen] = React.useState(false);
 
@@ -30,23 +30,26 @@ export default function MobileNavBar() {
             <Divider />
             <List>
                 {MenuItems.map((item) => (
-                    <Box padding={0.5} key={item.text}>
+                    <Box padding={0.5} key={item.id}>
                         <MenuItem
-                            key={item.text}
+                            key={item.id}
                             component={Link}
                             href={item.href}
+                            onClick={() => setNavItem(item)}
                             sx={{
                                 display: "flex",
                                 justifyContent: "center",
                                 textAlign: "center",
                                 wordSpacing: 3,
                                 color:
-                                    pathname === item.href
+                                    pathname === item.href ||
+                                    pathname.startsWith(item.href)
                                         ? "white"
                                         : "#9e9e9e",
                                 borderRadius: 5,
                                 backgroundColor:
-                                    pathname === item.href
+                                    pathname === item.href ||
+                                    pathname.startsWith(item.href)
                                         ? "#1f1f1f"
                                         : "inherit",
                             }}
