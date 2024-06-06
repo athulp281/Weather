@@ -82,7 +82,7 @@ function HomePage() {
 
     return (
         <div>
-            <Box sx={{ padding: 6, mt: 15 }}>
+            <Box sx={{ padding: smUp ? 6 : 3, mt: 15 }}>
                 <Stack direction={mdUp ? "row" : "column"} spacing={2}>
                     {mdUp ? (
                         <>

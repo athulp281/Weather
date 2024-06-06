@@ -13,15 +13,14 @@ import "@fontsource/open-sans";
 import logo from "../../assets/Logo.png";
 import Image from "next/image";
 import { MenuItems } from "./NavConfig";
+import useResponsive from "@/Hooks/useResponsive";
+import MobileNavBar from "./MobileNavBar";
 
 const Navbar = () => {
-    const pathname = usePathname();
+    const smUp = useResponsive("up", "sm");
 
-    // const menuItems = [
-    //     { text: "Home", href: "/" },
-    //     { text: "About", href: "/about" },
-    //     { text: "Contact", href: "/contact" },
-    // ];
+    const mdUp = useResponsive("up", "md");
+    const pathname = usePathname();
 
     return (
         <AppBar
@@ -55,29 +54,33 @@ const Navbar = () => {
                 >
                     Weather
                 </Typography>
-                <Box sx={{ display: "flex", flexDirection: "row" }}>
-                    {MenuItems.map((item) => (
-                        <MenuItem
-                            key={item.text}
-                            component={Link}
-                            href={item.href}
-                            sx={{
-                                wordSpacing: 3,
-                                color:
-                                    pathname === item.href
-                                        ? "white"
-                                        : "#9e9e9e",
-                                borderRadius: 5,
-                                backgroundColor:
-                                    pathname === item.href
-                                        ? "#1f1f1f"
-                                        : "inherit",
-                            }}
-                        >
-                            {item.text}
-                        </MenuItem>
-                    ))}
-                </Box>
+                {smUp ? (
+                    <Box sx={{ display: "flex", flexDirection: "row" }}>
+                        {MenuItems.map((item) => (
+                            <MenuItem
+                                key={item.text}
+                                component={Link}
+                                href={item.href}
+                                sx={{
+                                    wordSpacing: 3,
+                                    color:
+                                        pathname === item.href
+                                            ? "white"
+                                            : "#9e9e9e",
+                                    borderRadius: 5,
+                                    backgroundColor:
+                                        pathname === item.href
+                                            ? "#1f1f1f"
+                                            : "inherit",
+                                }}
+                            >
+                                {item.text}
+                            </MenuItem>
+                        ))}
+                    </Box>
+                ) : (
+                    <MobileNavBar />
+                )}
             </Toolbar>
         </AppBar>
     );

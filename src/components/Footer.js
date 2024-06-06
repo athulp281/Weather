@@ -22,7 +22,6 @@ function Footer() {
                 sx={{
                     width: "100%",
                     minHeight: 200,
-                    // bgcolor: "black",
                     display: "flex",
                     justifyContent: "center",
                     overflow: "hidden",
@@ -36,7 +35,7 @@ function Footer() {
                             <Box
                                 sx={{
                                     display: "flex",
-                                    width: "50%",
+                                    width: smUp ? "50%" : "100%",
                                     justifyContent: "center",
                                 }}
                             >
@@ -64,7 +63,6 @@ function Footer() {
                                             sx={{
                                                 mt: 1,
                                                 flexGrow: 1,
-                                                // color: "white",
                                                 fontWeight: "bolder",
                                                 fontFamily: "Open Sans",
                                                 fontStyle: "normal",
@@ -84,52 +82,98 @@ function Footer() {
                                     </Box>
                                 </Box>
                             </Box>
-                            <Box sx={{ width: "50%", padding: 4 }}>
-                                <Typography
-                                    variant="subtitle"
-                                    sx={{ fontWeight: "bolder" }}
+                            <Box
+                                sx={{
+                                    width: smUp ? "50%" : "100%",
+                                    padding: 4,
+                                }}
+                            >
+                                <Box
+                                    sx={{
+                                        display: "flex",
+                                        justifyContent: "center",
+                                        flexDirection: "column",
+                                        alignItems: "center",
+                                    }}
                                 >
-                                    Services
-                                </Typography>
-                                <Typography sx={{ color: "#797979" }}>
-                                    Current Weather
-                                </Typography>
-                                <Typography sx={{ color: "#797979" }}>
-                                    Weather forcasting
-                                </Typography>
-                                <Typography sx={{ color: "#797979" }}>
-                                    Weather News
-                                </Typography>
-                                <Typography sx={{ color: "#797979" }}>
-                                    Weather Map
-                                </Typography>
+                                    <Typography
+                                        variant="subtitle"
+                                        sx={{ fontWeight: "bolder" }}
+                                    >
+                                        Services
+                                    </Typography>
+                                    <Typography sx={{ color: "#797979" }}>
+                                        Current Weather
+                                    </Typography>
+                                    <Typography sx={{ color: "#797979" }}>
+                                        Weather forcasting
+                                    </Typography>
+                                    <Typography sx={{ color: "#797979" }}>
+                                        Weather News
+                                    </Typography>
+                                    <Typography sx={{ color: "#797979" }}>
+                                        Weather Map
+                                    </Typography>
+                                </Box>
                             </Box>
                         </Stack>
                         <Stack direction={mdUp ? "row" : "column"} spacing={2}>
-                            {" "}
-                            <Box sx={{ width: "50%", padding: 4 }}>
-                                <Typography
-                                    variant="subtitle"
-                                    sx={{ fontWeight: "bolder" }}
+                            <Box
+                                sx={{
+                                    width: smUp ? "50%" : "100%",
+                                    padding: 4,
+                                }}
+                            >
+                                <Box
+                                    sx={{
+                                        display: "flex",
+                                        justifyContent: "center",
+                                        flexDirection: "column",
+                                        alignItems: "center",
+                                    }}
                                 >
-                                    Company
-                                </Typography>
-                                <Typography sx={{ color: "#797979" }}>
-                                    Terms & Conditions
-                                </Typography>
-                                <Typography sx={{ color: "#797979" }}>
-                                    Privacy Policy
-                                </Typography>
+                                    <Typography
+                                        variant="subtitle"
+                                        sx={{ fontWeight: "bolder" }}
+                                    >
+                                        Company
+                                    </Typography>
+                                    <Typography sx={{ color: "#797979" }}>
+                                        Terms & Conditions
+                                    </Typography>
+                                    <Typography sx={{ color: "#797979" }}>
+                                        Privacy Policy
+                                    </Typography>
+                                </Box>
                             </Box>
-                            <Box sx={{ width: "50%", padding: 1 }}>
-                                <Box width={"100%"}>
+                            <Box
+                                sx={{
+                                    width: smUp ? "50%" : "100%",
+                                    padding: 1,
+                                }}
+                            >
+                                <Box
+                                    sx={{
+                                        display: "flex",
+                                        justifyContent: "center",
+                                        flexDirection: "column",
+                                        alignItems: "center",
+                                    }}
+                                >
                                     <Typography
                                         variant="subtitle"
                                         sx={{ fontWeight: "bolder" }}
                                     >
                                         Subscribe
                                     </Typography>
-                                    <Box pt={1} width={300}>
+                                    <Box
+                                        pt={1}
+                                        width={smUp ? 300 : "100%"}
+                                        sx={{
+                                            display: "flex",
+                                            justifyContent: "center",
+                                        }}
+                                    >
                                         <TextField
                                             label="Email"
                                             placeholder="Enter your email"
@@ -159,7 +203,9 @@ function Footer() {
                                 <Box
                                     sx={{
                                         display: "flex",
-                                        justifyContent: "flex-end",
+                                        justifyContent: smUp
+                                            ? "flex-end"
+                                            : "center",
                                     }}
                                 >
                                     <Button

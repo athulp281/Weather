@@ -9,17 +9,6 @@ function TimeStatus() {
     const [currentTime, setCurrentTime] = useState(new Date());
     const [currentMessageIndex, setCurrentMessageIndex] = useState(0);
 
-    // const getGreetingMessage = () => {
-    //     const hours = currentTime.getHours();
-    //     if (hours < 12) {
-    //         return "Good Morning";
-    //     } else if (hours < 18) {
-    //         return "Good Afternoon";
-    //     } else {
-    //         return "Good Evening";
-    //     }
-    // };
-
     const messages = [
         <Typography key="1" variant="h6">
             <WavingHandIcon sx={{ color: "orange" }} />
