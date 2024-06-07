@@ -75,7 +75,11 @@ function Asia() {
                     </Grid>
                     <Box mt={2}>
                         {MenuItems.map((item) => {
-                            return <BasicAccordion title={item.text} />;
+                            return (
+                                <Box key={item.id}>
+                                    <BasicAccordion title={item.text} />
+                                </Box>
+                            );
                         })}
                     </Box>
                 </Box>
@@ -87,11 +91,13 @@ function Asia() {
                     <Box sx={{ bgcolor: "#F5F5F5" }}>
                         {AsiaTreandingNews.map((item) => {
                             return (
-                                <TopStories
-                                    title={item.title}
-                                    description={item.description}
-                                    timestamp={item.timestamp}
-                                />
+                                <Box key={item.id}>
+                                    <TopStories
+                                        title={item.title}
+                                        description={item.description}
+                                        timestamp={item.timestamp}
+                                    />
+                                </Box>
                             );
                         })}
                     </Box>
