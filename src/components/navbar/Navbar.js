@@ -16,22 +16,28 @@ import { MenuItems } from "./NavConfig";
 import useResponsive from "@/Hooks/useResponsive";
 import MobileNavBar from "./MobileNavBar";
 import ChildrenNav from "./ChildrenNav";
+import CompanyIcon from "../CompanyIcon";
 
 const Navbar = () => {
     const smUp = useResponsive("up", "sm");
 
     const mdUp = useResponsive("up", "md");
     const pathname = usePathname();
-    console.log(pathname);
     const [navItem, setNavItem] = useState(null);
-    console.log(navItem);
-    // useEffect(() => {
-    //     if (navItem?.children) {
-    //     } else {
-    //         setNavItem(null);
-    //     }
-    // }, [pathname]);
+    useEffect(() => {
+        // Retrieve the navItem from local storage when the component mounts
+        const savedNavItem = localStorage.getItem("navItem");
+        if (savedNavItem) {
+            setNavItem(JSON.parse(savedNavItem));
+        }
+    }, []);
 
+    useEffect(() => {
+        // Save the navItem to local storage whenever it changes
+        if (navItem) {
+            localStorage.setItem("navItem", JSON.stringify(navItem));
+        }
+    }, [navItem]);
     return (
         <>
             <AppBar
@@ -39,33 +45,10 @@ const Navbar = () => {
                 sx={{ backgroundColor: "white", zIndex: 1100 }} // Changed position to "fixed" and adjusted zIndex
             >
                 <Toolbar>
-                    <Box
-                        edge="start"
-                        color="inherit"
-                        // aria-label="home"
-                        component={Link}
-                        onClick={() => setNavItem(null)}
-                        href="/"
-                        sx={{ pt: 1 }}
-                    >
-                        <Image src={logo} alt="logo" height={60} width={60} />
-
-                        {/* <AcUnitIcon sx={{ height: 40, width: 40 }} /> */}
+                    <Box sx={{ flexGrow: 1 }}>
+                        <CompanyIcon setNavItem={setNavItem} />
                     </Box>
-                    <Typography
-                        variant="h5"
-                        component="div"
-                        sx={{
-                            fontFamily: "Poppins ",
-                            flexGrow: 1,
-                            color: "black",
-                            fontWeight: "bolder",
-                            // fontFamily: "Open Sans",
-                            fontStyle: "normal",
-                        }}
-                    >
-                        Weather
-                    </Typography>
+
                     {smUp ? (
                         <Box sx={{ display: "flex", flexDirection: "row" }}>
                             {MenuItems.map((item) => {

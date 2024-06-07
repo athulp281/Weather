@@ -13,7 +13,7 @@ function ChildrenNav({ navItem }) {
     return (
         <div>
             <Box>
-                <Stack direction={"row"} spacing={2}>
+                <Stack direction={"row"} spacing={smUp ? 2 : 1}>
                     {navItem.children?.map((item) => {
                         return (
                             <Box key={item.id}>
@@ -25,18 +25,22 @@ function ChildrenNav({ navItem }) {
                                         display: "flex",
                                         justifyContent: "center",
                                         textAlign: "center",
+                                        fontWeight:
+                                            pathname === item.href
+                                                ? "bolder"
+                                                : "",
 
-                                        fontSize: smUp ? "" : 6,
+                                        fontSize: smUp ? "" : 7,
                                         color:
                                             pathname === item.href
                                                 ? "black"
                                                 : "#9e9e9e",
                                         borderRadius: 5,
-                                        border: 2,
-                                        borderColor:
-                                            pathname === item.href
-                                                ? "black"
-                                                : "inherit",
+                                        // border: 2,
+                                        // borderColor:
+                                        //     pathname === item.href
+                                        //         ? "black"
+                                        //         : "inherit",
                                         // backgroundColor:
                                         //     pathname === item.href
                                         //         ? "#1f1f1f"

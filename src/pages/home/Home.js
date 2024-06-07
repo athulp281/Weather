@@ -3,9 +3,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import WeatherCard from "../weatherHead/WeatherCard";
-import { Box, Container, Stack, Typography } from "@mui/material";
-import TimeStatus from "../../components/timeStatus/TimeStatus";
-import MapView from "./MapView";
+import { Box, Stack, Typography } from "@mui/material";
 import { AnimatedComponent } from "../../components/timeStatus";
 import Content from "./Content";
 import useResponsive from "@/Hooks/useResponsive";
@@ -53,15 +51,29 @@ function HomePage() {
 
         fetchWeatherData();
     }, [lat, lon]);
+
+    useEffect(() => {
+        localStorage.removeItem("navItem");
+    }, []);
+
     const Card = () => {
         return (
             <Box
                 sx={{
-                    width: mdUp ? "40%" : "100%",
+                    width: mdUp ? "60%" : "100%",
                     display: "flex",
                     justifyContent: "center",
                 }}
             >
+                {/* <script
+                    src="https://static.elfsight.com/platform/platform.js"
+                    data-use-service-core
+                    defer
+                ></script>
+                <div
+                    class="elfsight-app-4695db70-b779-49d1-8d27-60fa9cf42f90"
+                    data-elfsight-app-lazy
+                ></div> */}
                 <WeatherCard />
             </Box>
         );

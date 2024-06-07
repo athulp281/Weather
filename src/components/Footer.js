@@ -12,6 +12,7 @@ import React from "react";
 import useResponsive from "@/Hooks/useResponsive";
 import Image from "next/image";
 import logo from "../assets/Logo.png";
+import CompanyIcon from "./CompanyIcon";
 function Footer() {
     const smUp = useResponsive("up", "sm");
 
@@ -45,7 +46,7 @@ function Footer() {
                                     }}
                                 >
                                     <Stack direction={"row"}>
-                                        <Box
+                                        {/* <Box
                                             edge="start"
                                             color="inherit"
                                             aria-label="home"
@@ -69,7 +70,9 @@ function Footer() {
                                             }}
                                         >
                                             Weather
-                                        </Typography>
+
+                                        </Typography> */}
+                                        <CompanyIcon />
                                     </Stack>
                                     <Box>
                                         <Typography

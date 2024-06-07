@@ -2,11 +2,17 @@ import { Box, Stack, Typography } from "@mui/material";
 import Image from "next/image";
 import React from "react";
 import Logo from "../assets/Logo.png";
+import Link from "next/link";
 
-function CompanyIcon() {
+function CompanyIcon({ setNavItem }) {
     return (
         <div>
-            <Box mt={1}>
+            <Box
+                mt={1}
+                component={Link}
+                href="/"
+                onClick={() => setNavItem(null)}
+            >
                 <Stack direction={"row"}>
                     <Box>
                         <Image src={Logo} height={60} width={60} alt="logo" />
@@ -20,11 +26,11 @@ function CompanyIcon() {
                                 flexGrow: 1,
                                 color: "black",
                                 fontWeight: "bolder",
-                                // fontFamily: "Open Sans",
                                 fontStyle: "normal",
+                                fontSize: 14,
                             }}
                         >
-                            Weather
+                            Weather <br /> Company
                         </Typography>
                     </Box>
                 </Stack>
