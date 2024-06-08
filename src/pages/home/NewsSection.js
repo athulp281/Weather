@@ -10,12 +10,18 @@ function NewsSection() {
                 elevation={0}
                 sx={{
                     bgcolor: "#F5F5F5",
-                    p: 5,
+                    p: 1,
                     borderRadius: 1,
                 }}
             >
                 <Typography variant="h4">Weather News</Typography>
                 <Box>
+                    {/* <Grid
+                        container
+                        spacing={{ xs: 2, md: 3 }}
+                        columns={{ xs: 4, sm: 8, md: 12 }}
+                        sx={{ display: "flex", justifyContent: "center" }}
+                    > */}
                     <Grid
                         container
                         spacing={{ xs: 2, md: 3 }}
@@ -24,7 +30,7 @@ function NewsSection() {
                     >
                         {news.map((item, index) => {
                             return (
-                                <Grid item xs={6} sm={6} md={6} key={index}>
+                                <Grid item xs={2} sm={4} md={4} key={index}>
                                     <Box
                                         sx={{
                                             display: "flex",

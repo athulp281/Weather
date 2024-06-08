@@ -8,6 +8,7 @@ import { AnimatedComponent } from "../../components/timeStatus";
 import Content from "./Content";
 import useResponsive from "@/Hooks/useResponsive";
 import Footer from "@/components/Footer";
+import morningImg from "../../assets/Banner/morning.jpg";
 
 function HomePage() {
     const smUp = useResponsive("up", "sm");
@@ -94,7 +95,14 @@ function HomePage() {
 
     return (
         <div>
-            <Box sx={{ padding: smUp ? 6 : 3, mt: 15 }}>
+            <Box
+                sx={{
+                    backgroundImage: `url(${morningImg.src})`,
+                    backgroundSize: "cover",
+                    mt: 8,
+                    p: 4,
+                }}
+            >
                 <Stack direction={mdUp ? "row" : "column"} spacing={2}>
                     {mdUp ? (
                         <>
@@ -108,7 +116,8 @@ function HomePage() {
                         </>
                     )}
                 </Stack>
-
+            </Box>
+            <Box sx={{ padding: smUp ? 4 : 3 }}>
                 <Content />
             </Box>
             <Footer />

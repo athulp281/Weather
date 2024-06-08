@@ -18,7 +18,7 @@ const ContentSection = () => {
                     sx={{
                         display: "flex",
                         justifyContent: "center",
-                        pt: 10,
+                        pt: 1,
                     }}
                 >
                     <Stack direction={mdUp ? "row" : "column"} spacing={1}>

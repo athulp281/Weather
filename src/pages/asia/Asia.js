@@ -11,7 +11,7 @@ import { Box, Container, Grid, Typography } from "@mui/material";
 import React from "react";
 import useResponsive from "@/Hooks/useResponsive";
 import Footer from "@/components/Footer";
-import BasicAccordion from "@/components/Accordion";
+import NavigationAccordion from "@/components/Accordion";
 
 function Asia() {
     const smUp = useResponsive("up", "sm");
@@ -27,6 +27,7 @@ function Asia() {
 
             <Container
                 sx={{
+                    mb: 3,
                     mt: 3,
                     display: "flex",
                     flexDirection: mdUp ? "row" : "column",
@@ -74,13 +75,7 @@ function Asia() {
                         })}
                     </Grid>
                     <Box mt={2}>
-                        {MenuItems.map((item) => {
-                            return (
-                                <Box key={item.id}>
-                                    <BasicAccordion title={item.text} />
-                                </Box>
-                            );
-                        })}
+                        <NavigationAccordion />
                     </Box>
                 </Box>
                 <Box

@@ -276,3 +276,48 @@ export const AsiaTopNews = [
             "Prolonged drought conditions are affecting East Asia, leading to water shortages and impacting agriculture.",
     },
 ];
+
+export const IndiaWeatherNews = [
+    {
+        id: "1",
+        title: "Monsoon Flooding in Kerala",
+        image: "https://www.hindustantimes.com/ht-img/img/2023/06/26/550x309/ANI-20230626114-0_1687781163949_1687781188110.jpg",
+        description:
+            "Heavy monsoon rains have caused severe flooding in Kerala, resulting in displacement of thousands of people and widespread damage.",
+    },
+    {
+        id: "2",
+        title: "Heatwave Scorches Northern India",
+        image: "https://www.hindustantimes.com/ht-img/img/2023/06/26/550x309/ANI-20230626114-0_1687781163949_1687781188110.jpg",
+        description:
+            "Northern India is experiencing an intense heatwave with temperatures exceeding 45°C, affecting daily life and causing health concerns.",
+    },
+    {
+        id: "3",
+        title: "Cyclone Yaas Hits Eastern Coast",
+        image: "https://www.hindustantimes.com/ht-img/img/2023/06/26/550x309/ANI-20230626114-0_1687781163949_1687781188110.jpg",
+        description:
+            "Cyclone Yaas has struck the eastern coast of India, bringing heavy rains and strong winds, leading to evacuations and damage to property.",
+    },
+    {
+        id: "4",
+        title: "Dense Fog Disrupts Delhi Traffic",
+        image: "https://www.hindustantimes.com/ht-img/img/2023/06/26/550x309/ANI-20230626114-0_1687781163949_1687781188110.jpg",
+        description:
+            "Dense fog has enveloped Delhi, causing major disruptions in traffic and affecting flight schedules at the Indira Gandhi International Airport.",
+    },
+    {
+        id: "5",
+        title: "Unseasonal Rains in Maharashtra",
+        image: "https://www.hindustantimes.com/ht-img/img/2023/06/26/550x309/ANI-20230626114-0_1687781163949_1687781188110.jpg",
+        description:
+            "Maharashtra is experiencing unseasonal rains, affecting the harvest season and causing concerns among farmers.",
+    },
+    {
+        id: "6",
+        title: "Cold Wave Grips Himachal Pradesh",
+        image: "https://www.hindustantimes.com/ht-img/img/2023/06/26/550x309/ANI-20230626114-0_1687781163949_1687781188110.jpg",
+        description:
+            "Himachal Pradesh is under the grip of a cold wave, with temperatures dropping significantly and affecting daily life in the region.",
+    },
+];

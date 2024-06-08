@@ -1,7 +1,12 @@
+import India from "@/pages/asia/India";
 import React from "react";
 
 function page() {
-    return <div>page</div>;
+    return (
+        <div>
+            <India />
+        </div>
+    );
 }
 
 export default page;
