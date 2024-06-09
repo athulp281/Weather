@@ -10,14 +10,14 @@ function TimeStatus() {
     const [currentMessageIndex, setCurrentMessageIndex] = useState(0);
 
     const messages = [
-        <Typography key="1" variant="h6">
+        <Typography key="1" variant="h6" sx={{ color: "white" }}>
             <WavingHandIcon sx={{ color: "orange" }} />
             Hey there..!
         </Typography>,
-        <Typography key="2" variant="h6">
+        <Typography key="2" variant="h6" sx={{ color: "white" }}>
             {GetGreetingMessage()}
         </Typography>,
-        <Typography key="3" variant="h6">
+        <Typography key="3" variant="h6" sx={{ color: "white" }}>
             <SentimentSatisfiedAltIcon sx={{ color: "orange" }} />
             Have a good day
         </Typography>,
@@ -53,7 +53,9 @@ function TimeStatus() {
                 >
                     {messages[currentMessageIndex]}
                 </motion.div>
-                <p>{currentTime.toLocaleTimeString()}</p>
+                <p style={{ color: "white" }}>
+                    {currentTime.toLocaleTimeString()}
+                </p>
             </Box>
         </div>
     );

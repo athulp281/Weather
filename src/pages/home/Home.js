@@ -9,49 +9,53 @@ import Content from "./Content";
 import useResponsive from "@/Hooks/useResponsive";
 import Footer from "@/components/Footer";
 import morningImg from "../../assets/Banner/morning.jpg";
+import noonimg from "../../assets/Banner/noon.jpg";
+import nightimg from "../../assets/Banner/night.jpg";
 
 function HomePage() {
     const smUp = useResponsive("up", "sm");
-
     const mdUp = useResponsive("up", "md");
     const styles = {
-        fontFamily: "Poppins ", // Change to your preferred font family
+        fontFamily: "Poppins ",
         fontWeight: "bold",
-        fontSize: mdUp ? "4rem" : "2rem", // Adjust as needed
-        lineHeight: "1.5", // Adjust as needed
-        marginBottom: "1.5rem", // Add space between lines
+        fontSize: mdUp ? "4rem" : "2rem",
+        lineHeight: "1.5",
+        marginBottom: "1.5rem",
     };
-    const [weatherData, setWeatherData] = useState(null);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
-    const BASE_URL =
-        "api.openweathermap.org/data/2.5/forecast?lat=44.34&lon=10.99&appid={API key}";
-    const lat = 37.7749;
-    const lon = -122.4194;
+    const [imageSrc, setImageSrc] = useState("");
+
     useEffect(() => {
-        const fetchWeatherData = async () => {
-            try {
-                const response = await axios.get(
-                    "api.openweathermap.org/data/2.5/forecast",
-                    {
-                        params: {
-                            lat: lat,
-                            lon: lon,
-                            exclude: "minutely,hourly",
-                            appid: "24324da55952f125184674baf44cb048",
-                        },
-                    }
-                );
-                setWeatherData(response.data);
-            } catch (error) {
-                setError(error);
-            } finally {
-                setLoading(false);
-            }
+        const getCurrentHour = () => {
+            const now = new Date();
+            return now.getHours();
         };
 
-        fetchWeatherData();
-    }, [lat, lon]);
+        const setImageBasedOnTime = () => {
+            const img1 = morningImg;
+            const img2 = noonimg;
+            const img3 = nightimg;
+
+            const hour = getCurrentHour();
+            let imagePath = "";
+
+            if (hour >= 6 && hour < 12) {
+                imagePath = img1;
+            } else if (hour >= 12 && hour < 18) {
+                imagePath = img2;
+            } else {
+                imagePath = img3;
+            }
+            console.log(
+                imagePath.src === "/_next/static/media/noon.93b8c395.jpg"
+                    ? "yess"
+                    : "no"
+            );
+
+            setImageSrc(imagePath);
+        };
+
+        setImageBasedOnTime();
+    }, []);
 
     useEffect(() => {
         localStorage.removeItem("navItem");
@@ -79,12 +83,22 @@ function HomePage() {
             </Box>
         );
     };
-    const Title = () => {
+    const Title = ({ banner }) => {
         return (
             <Box sx={{ width: mdUp ? "60%" : "100%" }}>
                 <Box>
                     <AnimatedComponent />
-                    <Typography variant="h4" style={styles}>
+                    <Typography
+                        variant="h4"
+                        style={styles}
+                        sx={{
+                            color:
+                                banner.src ===
+                                "/_next/static/media/noon.93b8c395.jpg"
+                                    ? "white"
+                                    : "",
+                        }}
+                    >
                         Stay updated with the latest weather <br /> forecasts
                         and alerts for your area.
                     </Typography>
@@ -97,7 +111,7 @@ function HomePage() {
         <div>
             <Box
                 sx={{
-                    backgroundImage: `url(${morningImg.src})`,
+                    backgroundImage: `url(${imageSrc.src})`,
                     backgroundSize: "cover",
                     mt: 8,
                     p: 4,
@@ -107,11 +121,11 @@ function HomePage() {
                     {mdUp ? (
                         <>
                             <Card />
-                            <Title />
+                            <Title banner={imageSrc} />
                         </>
                     ) : (
                         <>
-                            <Title />
+                            <Title banner={imageSrc} />
                             <Card />
                         </>
                     )}
