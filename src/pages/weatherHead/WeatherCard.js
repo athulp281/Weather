@@ -37,9 +37,6 @@ function WeatherCard() {
     });
     const [error, setError] = useState(null);
 
-    console.log(location, "location");
-    console.log("error", error);
-
     useEffect(() => {
         if ("geolocation" in navigator) {
             navigator.geolocation.getCurrentPosition(
@@ -88,7 +85,11 @@ function WeatherCard() {
         <div>
             <GlassCard>
                 <Box sx={{ display: "flex", justifyContent: "center", mt: 2 }}>
-                    <Stack direction={"row"} spacing={2}>
+                    <Stack
+                        sx={{ padding: smUp ? null : 2 }}
+                        direction={"row"}
+                        spacing={2}
+                    >
                         <TextField
                             label="location"
                             placeholder="Enter your place"

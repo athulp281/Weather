@@ -46,33 +46,13 @@ function Footer() {
                                     }}
                                 >
                                     <Stack direction={"row"}>
-                                        {/* <Box
-                                            edge="start"
-                                            color="inherit"
-                                            aria-label="home"
-                                        >
-                                            <Image
-                                                src={logo}
-                                                alt="logo"
-                                                height={50}
-                                                width={50}
-                                            />
-                                        </Box>
-                                        <Typography
-                                            variant="h6"
-                                            component="div"
+                                        <Box
                                             sx={{
-                                                mt: 1,
-                                                flexGrow: 1,
-                                                fontWeight: "bolder",
-                                                fontFamily: "Open Sans",
-                                                fontStyle: "normal",
+                                                paddingLeft: smUp ? null : 9,
                                             }}
                                         >
-                                            Weather
-
-                                        </Typography> */}
-                                        <CompanyIcon />
+                                            <CompanyIcon />
+                                        </Box>
                                     </Stack>
                                     <Box>
                                         <Typography
@@ -240,7 +220,7 @@ function Footer() {
                 }}
             >
                 <Typography variant="caption" sx={{ color: "#797979" }}>
-                    Copyright © 2024 Weather .
+                    Copyright © 2024 Weather Company
                 </Typography>
             </Box>
         </div>
