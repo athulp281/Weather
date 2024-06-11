@@ -45,11 +45,6 @@ function HomePage() {
             } else {
                 imagePath = img3;
             }
-            console.log(
-                imagePath.src === "/_next/static/media/noon.93b8c395.jpg"
-                    ? "yess"
-                    : "no"
-            );
 
             setImageSrc(imagePath);
         };
@@ -57,9 +52,9 @@ function HomePage() {
         setImageBasedOnTime();
     }, []);
 
-    useEffect(() => {
-        localStorage.removeItem("navItem");
-    }, []);
+    // useEffect(() => {
+    //     localStorage.removeItem("navItem");
+    // }, []);
 
     const Card = () => {
         return (

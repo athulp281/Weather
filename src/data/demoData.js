@@ -321,3 +321,124 @@ export const IndiaWeatherNews = [
             "Himachal Pradesh is under the grip of a cold wave, with temperatures dropping significantly and affecting daily life in the region.",
     },
 ];
+// -------------------------------------------------------------------
+
+export const asiaTrending = [
+    {
+        id: 1,
+        image: "https://c8.alamy.com/comp/BMDW8Y/petaling-street-market-stall-thunderstorm-heavy-rain-BMDW8Y.jpg",
+        title: "Groundbreaking Discovery in Space Exploration",
+        description:
+            "Scientists have discovered a new exoplanet that could potentially support life, marking a significant milestone in space exploration.",
+    },
+    {
+        id: 2,
+        image: "https://c8.alamy.com/comp/BMDW8Y/petaling-street-market-stall-thunderstorm-heavy-rain-BMDW8Y.jpg",
+        title: "Historic Peace Agreement Signed",
+        description:
+            "Two neighboring countries have signed a historic peace agreement, ending decades of conflict and opening a new chapter ",
+    },
+    {
+        id: 3,
+        image: "https://c8.alamy.com/comp/BMDW8Y/petaling-street-market-stall-thunderstorm-heavy-rain-BMDW8Y.jpg",
+        title: "Advancements in Renewable Energy",
+        description:
+            "A new solar panel technology promises to significantly increase energy efficiency, paving the way for more sustainable power solutions.",
+    },
+];
+
+export const africaTrending = [
+    {
+        id: 1,
+        image: "https://loe.org/content/2018-01-05/DAMS-boy_tilling_dry_field.jpg",
+        title: "Groundbreaking Discovery in Space Exploration",
+        description:
+            "Scientists have discovered a new exoplanet that could potentially support life, marking a significant milestone in space exploration.",
+    },
+    {
+        id: 2,
+        image: "https://loe.org/content/2018-01-05/DAMS-boy_tilling_dry_field.jpg",
+        title: "Historic Peace Agreement Signed",
+        description:
+            "Two neighboring countries have signed a historic peace agreement, ending decades of conflict and opening a new chapter ",
+    },
+    {
+        id: 3,
+        image: "https://loe.org/content/2018-01-05/DAMS-boy_tilling_dry_field.jpg",
+        title: "Advancements in Renewable Energy",
+        description:
+            "A new solar panel technology promises to significantly increase energy efficiency, paving the way for more sustainable power solutions.",
+    },
+];
+
+export const europeTrending = [
+    {
+        id: 1,
+        image: "https://www.visa.co.uk/dam/VCOM/regional/ve/unitedkingdom/in-page-images/visa-in-europe/visa-eu-header-france-1600x900.jpg",
+        title: "Groundbreaking Discovery in Space Exploration",
+        description:
+            "Scientists have discovered a new exoplanet that could potentially support life, marking a significant milestone in space exploration.",
+    },
+    {
+        id: 2,
+        image: "https://www.visa.co.uk/dam/VCOM/regional/ve/unitedkingdom/in-page-images/visa-in-europe/visa-eu-header-france-1600x900.jpg",
+        title: "Historic Peace Agreement Signed",
+        description:
+            "Two neighboring countries have signed a historic peace agreement, ending decades of conflict and opening a new chapter ",
+    },
+    {
+        id: 3,
+        image: "https://www.visa.co.uk/dam/VCOM/regional/ve/unitedkingdom/in-page-images/visa-in-europe/visa-eu-header-france-1600x900.jpg",
+        title: "Advancements in Renewable Energy",
+        description:
+            "A new solar panel technology promises to significantly increase energy efficiency, paving the way for more sustainable power solutions.",
+    },
+];
+
+export const northAmericaTrending = [
+    {
+        id: 1,
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvsLZmy7d8-vQMuhQdVFmavuBTK0tR6dwKBA&usqp=CAU",
+        title: "Groundbreaking Discovery in Space Exploration",
+        description:
+            "Scientists have discovered a new exoplanet that could potentially support life, marking a significant milestone in space exploration.",
+    },
+    {
+        id: 2,
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvsLZmy7d8-vQMuhQdVFmavuBTK0tR6dwKBA&usqp=CAU",
+        title: "Historic Peace Agreement Signed",
+        description:
+            "Two neighboring countries have signed a historic peace agreement, ending decades of conflict and opening a new chapter ",
+    },
+    {
+        id: 3,
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvsLZmy7d8-vQMuhQdVFmavuBTK0tR6dwKBA&usqp=CAU",
+        title: "Advancements in Renewable Energy",
+        description:
+            "A new solar panel technology promises to significantly increase energy efficiency, paving the way for more sustainable power solutions.",
+    },
+];
+
+export const southAmericaTrending = [
+    {
+        id: 1,
+        image: "https://www.zicasso.com/static/165a445609685a5f417deacef2f950fe/6d821/165a445609685a5f417deacef2f950fe.jpg",
+        title: "Groundbreaking Discovery in Space Exploration",
+        description:
+            "Scientists have discovered a new exoplanet that could potentially support life, marking a significant milestone in space exploration.",
+    },
+    {
+        id: 2,
+        image: "https://www.zicasso.com/static/165a445609685a5f417deacef2f950fe/6d821/165a445609685a5f417deacef2f950fe.jpg",
+        title: "Historic Peace Agreement Signed",
+        description:
+            "Two neighboring countries have signed a historic peace agreement, ending decades of conflict and opening a new chapter ",
+    },
+    {
+        id: 3,
+        image: "https://www.zicasso.com/static/165a445609685a5f417deacef2f950fe/6d821/165a445609685a5f417deacef2f950fe.jpg",
+        title: "Advancements in Renewable Energy",
+        description:
+            "A new solar panel technology promises to significantly increase energy efficiency, paving the way for more sustainable power solutions.",
+    },
+];
