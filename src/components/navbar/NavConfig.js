@@ -26,5 +26,5 @@ export const MenuItems = [
     },
     { id: 4, text: "Europe", href: "/europe" },
     { id: 5, text: "North America", href: "/north-america" },
-    { id: 5, text: "South America", href: "/south-smerica" },
+    { id: 6, text: "South America", href: "/south-smerica" },
 ];

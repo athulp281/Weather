@@ -8,10 +8,7 @@ import MenuItem from "@mui/material/MenuItem";
 import Box from "@mui/material/Box";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import AcUnitIcon from "@mui/icons-material/AcUnit";
 import "@fontsource/open-sans";
-import logo from "../../assets/Logo.png";
-import Image from "next/image";
 import { MenuItems } from "./NavConfig";
 import useResponsive from "@/Hooks/useResponsive";
 import MobileNavBar from "./MobileNavBar";
@@ -89,9 +86,10 @@ const Navbar = () => {
             {navItem ? (
                 <Box
                     sx={{
-                        mt: 10,
+                        mt: 8,
                         display: "flex",
                         justifyContent: "center",
+                        bgcolor: "black",
                     }}
                 >
                     {" "}

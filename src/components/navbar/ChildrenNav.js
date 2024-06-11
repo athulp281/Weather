@@ -12,7 +12,7 @@ function ChildrenNav({ navItem }) {
     const pathname = usePathname();
     return (
         <div>
-            <Box>
+            <Box mt={2}>
                 <Stack direction={"row"} spacing={smUp ? 2 : 1}>
                     {navItem.children?.map((item) => {
                         return (
@@ -33,7 +33,7 @@ function ChildrenNav({ navItem }) {
                                         fontSize: smUp ? "" : 7,
                                         color:
                                             pathname === item.href
-                                                ? "black"
+                                                ? "white"
                                                 : "#9e9e9e",
                                         borderRadius: 5,
                                         // border: 2,
@@ -55,7 +55,7 @@ function ChildrenNav({ navItem }) {
                                             borderBottomWidth: 3,
                                             backgroundColor:
                                                 pathname === item.href
-                                                    ? "black"
+                                                    ? "white"
                                                     : "",
                                         }}
                                     />
