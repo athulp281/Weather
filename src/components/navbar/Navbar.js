@@ -88,7 +88,7 @@ const Navbar = () => {
                         <Box sx={{ display: "flex", flexDirection: "row" }}>
                             {MenuItems.map((item) => {
                                 return (
-                                    <>
+                                    <Box key={item.id}>
                                         {item.text === "Home" ? null : (
                                             <MenuItem
                                                 key={item.id}
@@ -121,7 +121,7 @@ const Navbar = () => {
                                                 {item.text}
                                             </MenuItem>
                                         )}
-                                    </>
+                                    </Box>
                                 );
                             })}
                         </Box>
@@ -133,11 +133,14 @@ const Navbar = () => {
 
             {navItem ? (
                 <Box
+                    position="fixed"
                     sx={{
                         mt: 8,
                         display: "flex",
                         justifyContent: "center",
                         bgcolor: "black",
+                        width: "100%",
+                        zIndex: 1200,
                     }}
                 >
                     {" "}

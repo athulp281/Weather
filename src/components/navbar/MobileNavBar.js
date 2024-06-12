@@ -31,31 +31,33 @@ export default function MobileNavBar({ setNavItem }) {
             <List>
                 {MenuItems.map((item) => (
                     <Box padding={0.5} key={item.id}>
-                        <MenuItem
-                            key={item.id}
-                            component={Link}
-                            href={item.href}
-                            onClick={() => setNavItem(item)}
-                            sx={{
-                                display: "flex",
-                                justifyContent: "center",
-                                textAlign: "center",
-                                wordSpacing: 3,
-                                color:
-                                    pathname === item.href ||
-                                    pathname.startsWith(item.href)
-                                        ? "white"
-                                        : "#9e9e9e",
-                                borderRadius: 5,
-                                backgroundColor:
-                                    pathname === item.href ||
-                                    pathname.startsWith(item.href)
-                                        ? "#1f1f1f"
-                                        : "inherit",
-                            }}
-                        >
-                            {item.text}
-                        </MenuItem>
+                        {item.text === "Home" ? null : (
+                            <MenuItem
+                                key={item.id}
+                                component={Link}
+                                href={item.href}
+                                onClick={() => setNavItem(item)}
+                                sx={{
+                                    display: "flex",
+                                    justifyContent: "center",
+                                    textAlign: "center",
+                                    wordSpacing: 3,
+                                    color:
+                                        pathname === item.href ||
+                                        pathname.startsWith(item.href)
+                                            ? "white"
+                                            : "#9e9e9e",
+                                    borderRadius: 5,
+                                    backgroundColor:
+                                        pathname === item.href ||
+                                        pathname.startsWith(item.href)
+                                            ? "#1f1f1f"
+                                            : "inherit",
+                                }}
+                            >
+                                {item.text}
+                            </MenuItem>
+                        )}
                     </Box>
                 ))}
             </List>

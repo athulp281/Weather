@@ -20,7 +20,7 @@ function WeatherCard() {
         background: "rgba(255, 255, 255, 0.1)",
         borderRadius: "15px",
         color: "white",
-        height: 500,
+        height: 250,
         width: smUp ? 400 : mdUp ? "100%" : "100%",
         backdropFilter: "blur(10px)",
         boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
@@ -84,7 +84,7 @@ function WeatherCard() {
     return (
         <div>
             <GlassCard>
-                <Box sx={{ display: "flex", justifyContent: "center", mt: 2 }}>
+                {/* <Box sx={{ display: "flex", justifyContent: "center", mt: 2 }}>
                     <Stack
                         sx={{ padding: smUp ? null : 2 }}
                         direction={"row"}
@@ -132,9 +132,9 @@ function WeatherCard() {
                             </Button>
                         </Box>
                     </Stack>
-                </Box>
-                <Box sx={{ display: "flex", justifyContent: "center", mt: 5 }}>
-                    <Stack direction={"column"} spacing={2}>
+                </Box> */}
+                <Box sx={{ display: "flex", justifyContent: "center", mt: 1 }}>
+                    <Stack direction={"column"} spacing={0.5}>
                         <Box
                             sx={{
                                 display: "flex",
@@ -149,13 +149,13 @@ function WeatherCard() {
                             sx={{
                                 display: "flex",
                                 justifyContent: "center",
-                                mt: 5,
+                                mt: 0,
                             }}
                         >
                             <Typography
                                 variant="h6"
                                 sx={{
-                                    fontSize: 40,
+                                    fontSize: 30,
                                     fontFamily: "Forum",
                                     color: "black",
                                 }}
@@ -167,13 +167,13 @@ function WeatherCard() {
                             sx={{
                                 display: "flex",
                                 justifyContent: "center",
-                                mt: 5,
+                                mt: 2,
                             }}
                         >
                             <Typography
                                 variant="h6"
                                 sx={{
-                                    fontSize: 20,
+                                    fontSize: 15,
                                     fontFamily: "Forum",
                                     color: "black",
                                 }}
@@ -188,7 +188,6 @@ function WeatherCard() {
                         display: "flex",
                         justifyContent: "space-between",
                         padding: 4,
-                        mt: 5,
                     }}
                 >
                     <Box>
@@ -203,7 +202,7 @@ function WeatherCard() {
                                 />
                             </Box>
                             <Box>
-                                <Box sx={{ mt: 1, color: "black" }}>
+                                <Box sx={{ mt: 0, color: "black" }}>
                                     <Typography>22%</Typography>
                                     <Typography>Humidity</Typography>
                                 </Box>
@@ -222,7 +221,7 @@ function WeatherCard() {
                                 />
                             </Box>
                             <Box>
-                                <Box sx={{ mt: 1, color: "black" }}>
+                                <Box sx={{ mt: 0, color: "black" }}>
                                     <Typography>18 km/h</Typography>
                                     <Typography>Wind Speed</Typography>
                                 </Box>

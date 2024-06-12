@@ -11,6 +11,7 @@ import Footer from "@/components/Footer";
 import morningImg from "../../assets/Banner/morning.jpg";
 import noonimg from "../../assets/Banner/noon.jpg";
 import nightimg from "../../assets/Banner/night.jpg";
+import HomeSearchField from "@/components/HomeSearchField";
 
 function HomePage() {
     const smUp = useResponsive("up", "sm");
@@ -18,7 +19,7 @@ function HomePage() {
     const styles = {
         fontFamily: "Poppins ",
         fontWeight: "bold",
-        fontSize: mdUp ? "4rem" : "2rem",
+        fontSize: mdUp ? "2.5rem" : "1rem",
         lineHeight: "1.5",
         marginBottom: "1.5rem",
     };
@@ -84,7 +85,7 @@ function HomePage() {
                 <Box>
                     <AnimatedComponent />
                     <Typography
-                        variant="h4"
+                        variant="h1"
                         style={styles}
                         sx={{
                             color:
@@ -112,6 +113,7 @@ function HomePage() {
                     p: 4,
                 }}
             >
+                <HomeSearchField />
                 <Stack direction={mdUp ? "row" : "column"} spacing={2}>
                     {mdUp ? (
                         <>
