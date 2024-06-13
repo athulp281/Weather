@@ -12,6 +12,7 @@ import React from "react";
 import useResponsive from "@/Hooks/useResponsive";
 import Footer from "@/components/Footer";
 import NavigationAccordion from "@/components/Accordion";
+import WrapperContainer from "@/components/WrapperContainer";
 
 function India() {
     const smUp = useResponsive("up", "sm");
@@ -19,11 +20,11 @@ function India() {
     const mdUp = useResponsive("up", "md");
     return (
         <div>
-            <Container sx={{ marginTop: 2 }}>
+            <WrapperContainer>
                 <Box sx={{ bgcolor: "#F5F5F5", width: "100%", height: 250 }}>
                     Ads
                 </Box>
-            </Container>
+            </WrapperContainer>
 
             <Container
                 sx={{

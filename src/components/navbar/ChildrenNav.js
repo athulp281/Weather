@@ -36,15 +36,6 @@ function ChildrenNav({ navItem }) {
                                                 ? "white"
                                                 : "#9e9e9e",
                                         borderRadius: 5,
-                                        // border: 2,
-                                        // borderColor:
-                                        //     pathname === item.href
-                                        //         ? "black"
-                                        //         : "inherit",
-                                        // backgroundColor:
-                                        //     pathname === item.href
-                                        //         ? "#1f1f1f"
-                                        //         : "inherit",
                                     }}
                                 >
                                     {item.name}
