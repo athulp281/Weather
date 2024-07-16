@@ -235,45 +235,45 @@ export const AsiaTreandingNews = [
 export const AsiaTopNews = [
     {
         id: "1",
-        title: "Typhoon Strikes Southeast Asia",
+        title: "Jemaah Islamiyah, an armed group in Southeast Asia, would dissolve",
         image: "https://c8.alamy.com/comp/2BH54RX/india-hurricane-news-background-2BH54RX.jpg",
         description:
-            "A powerful typhoon has hit Southeast Asia, causing widespread damage and flooding in several countries.",
+            "ReportA cell with ties to al-Qaeda is suspected of planning some of the deadliest assaults in Indonesia, such as the bombing of Bali nightclubs in 2002 that claimed the lives of over 200 people.",
     },
     {
         id: "2",
-        title: "Heatwave in South Asia",
+        title: "At the SCO fringes",
         image: "https://c8.alamy.com/comp/2BH54RX/india-hurricane-news-background-2BH54RX.jpg",
         description:
-            "South Asia is experiencing an extreme heatwave with temperatures soaring above 45°C, impacting millions of people.",
+            "Putin and Xi praise the stability of the China-Russian cooperation.As a counterweight to Western dominance, the two established the Central Asian Security Summit, and after Russia invaded Ukraine in 2022, their relationship has become stronger.",
     },
     {
         id: "3",
-        title: "Heavy Rains Flood Northern India",
+        title: " The world's earliest piece of art found in an Indonesian cave",
         image: "https://c8.alamy.com/comp/2BH54RX/india-hurricane-news-background-2BH54RX.jpg",
         description:
-            "Heavy monsoon rains have led to severe flooding in Northern India, displacing thousands and causing significant damage to infrastructure.",
+            "In a cave on the Indonesian island of Sulawesi, scientists have found what they claim to be the oldest artwork in history, which shows three people gathered around a huge red pig.",
     },
     {
         id: "4",
-        title: "Cold Wave Sweeps Through Central Asia",
+        title: "China reportedly seized a fishing boat close to Taiwan's shore.",
         image: "https://c8.alamy.com/comp/2BH54RX/india-hurricane-news-background-2BH54RX.jpg",
         description:
-            "Central Asia is experiencing a severe cold wave, with temperatures dropping to record lows and affecting daily life.",
+            "Taiwan has reported that a fishing boat belonging to its six-member crew was taken by Chinese coastguard personnel and brought to a port on the Chinese mainland. Beijing is being urged to free the boat and its crew.",
     },
     {
         id: "5",
-        title: "Tropical Storm Hits Philippines",
+        title: "The Indian Cricket Board selects Gautam Gambhir to lead the men's team.",
         image: "https://c8.alamy.com/comp/2BH54RX/india-hurricane-news-background-2BH54RX.jpg",
         description:
-            "A tropical storm has made landfall in the Philippines, bringing heavy rain and strong winds, and leading to evacuation efforts.",
+            "In order to build on their recent World Cup victory, India's cricket board has appointed former opener Gautam Gambhir as head coach of the men's squad, replacing Rahul Dravid.",
     },
     {
         id: "6",
-        title: "Drought Conditions in East Asia",
+        title: "Japan and the Philippines ink defense agreement with China in mind.",
         image: "https://c8.alamy.com/comp/2BH54RX/india-hurricane-news-background-2BH54RX.jpg",
         description:
-            "Prolonged drought conditions are affecting East Asia, leading to water shortages and impacting agriculture.",
+            "A defense agreement was made between Japan and the Philippines to permit the stationing of troops on each other's territory in response to their mutual concerns of China's increasing military might",
     },
 ];
 
