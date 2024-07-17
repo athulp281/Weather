@@ -25,6 +25,63 @@ function HomePage() {
     };
     const [imageSrc, setImageSrc] = useState("");
 
+    // -----------------------------------------------------------------------------------------------
+
+    const [location, setLocation] = useState({
+        latitude: null,
+        longitude: null,
+    });
+    const [weatherData, setWeatherData] = useState(null);
+    console.log("weatherData", weatherData);
+    const [error, setError] = useState(null);
+
+    // --------------------------------------------
+    // useEffect(() => {
+    //  if(weatherData){
+    //     localStorage.setItem('weatherData', JSON.stringify(weatherData));
+
+    //  }
+    // }, [weatherData])
+
+    useEffect(() => {
+        if ("geolocation" in navigator) {
+            navigator.geolocation.getCurrentPosition(
+                (position) => {
+                    setLocation({
+                        latitude: position.coords.latitude,
+                        longitude: position.coords.longitude,
+                    });
+                },
+                (error) => {
+                    setError(error.message);
+                }
+            );
+        } else {
+            setError("Geolocation is not available");
+        }
+    }, []);
+
+    useEffect(() => {
+        const fetchWeatherData = async () => {
+            try {
+                const response = await axios.get("/api/weather", {
+                    params: {
+                        lat: 11.050976,
+                        lon: 76.071098,
+                        q: "malappuram",
+                    },
+                });
+                setWeatherData(response.data.list[0].weather[0]);
+            } catch (error) {
+                setError("Failed to fetch weather data");
+            }
+        };
+
+        fetchWeatherData();
+    }, []);
+
+    // ------------------------------------------------------------------------------------------------
+
     useEffect(() => {
         const getCurrentHour = () => {
             const now = new Date();
@@ -53,10 +110,6 @@ function HomePage() {
         setImageBasedOnTime();
     }, []);
 
-    // useEffect(() => {
-    //     localStorage.removeItem("navItem");
-    // }, []);
-
     const Card = () => {
         return (
             <Box
@@ -66,15 +119,6 @@ function HomePage() {
                     justifyContent: "center",
                 }}
             >
-                {/* <script
-                    src="https://static.elfsight.com/platform/platform.js"
-                    data-use-service-core
-                    defer
-                ></script>
-                <div
-                    class="elfsight-app-4695db70-b779-49d1-8d27-60fa9cf42f90"
-                    data-elfsight-app-lazy
-                ></div> */}
                 <WeatherCard />
             </Box>
         );
